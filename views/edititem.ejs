@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Edit <%= dailytracker %></title>
+    <style>
+        /* Add some basic styling to make the page visually appealing */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Edit <%= dailytracker %>:</h1>
+    <form action="/dailytracker/edit/<%= dailytrackerIdx %>" method="post">
+        <p>
+            <!-- Use a more semantic label for accessibility -->
+            <label for="editdailytracker">New dailytracker:</label>
+            <input type="hidden" name="_method" value="PUT">
+            <input type="text" name="editdailytracker" id="editdailytracker" autofocus placeholder="Enter new dailytracker" required />
+            <!-- Add the "required" attribute to make the input mandatory -->
+            <input type="submit" value="Save" />
+        </p>
+    </form>
+</body>
+
+</html>
