@@ -41,10 +41,10 @@ Docker Installation:
 2.	CMD ["node","app.js"]
 3.	docker build . -t node-app
 4.	sudo usermod -a -G docker $USER
-5.	docker run -d --name node-daily-app -p 8000:8000 todo-node-app
+5.	docker run -d --name node-daily-app -p 8000:8000 dailytracker-node-app
 
 Got to jenkins job and Execute shell:
-1.	docker build . -t node-app-todo
-2.	docker run -d --name node-app-container -p 8000:8000 node-app-todo
+1.	docker build . -t node-app-dailytracker
+2.	docker run -d --name node-app-container -p 8000:8000 node-app-dailytracker
 
 Note: Ensure that the commands are executed with the appropriate permissions and configurations in the target environment. Additionally, the Jenkins initial admin password is crucial for the initial setup and should be handled securely.
